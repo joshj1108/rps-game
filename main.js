@@ -1,14 +1,13 @@
-//create function getComputerChoice()
-function getComputerChoice(){
-    //random return choice of (rock, paper, scissors)
-    return getRandom(['rock', 'paper', 'scissors']) 
-}
 //function to randomly generate a choice from a given list
 function getRandom(list) {
     return list[Math.floor(Math.random() * list.length)]
 }
 
-
+//create function getComputerChoice()
+function getComputerChoice(){
+    //random return choice of (rock, paper, scissors)
+    return getRandom(['rock', 'paper', 'scissors']) 
+}
 
 //player/computer selection variables
 const playerSelection = 'rock';
@@ -53,7 +52,7 @@ let computerScore = 0;
 function game () {
        
     for (let i = 0; i < 5; i++){
-            playRound(playerSelection, computerSelection)
+            playRound(playerSelection, getComputerChoice());
         } 
 
         if (playerScore > computerScore){
@@ -66,3 +65,4 @@ function game () {
 console.log(game());
 console.log(computerScore);
 console.log(playerScore);
+console.log(playerScore + computerScore);
