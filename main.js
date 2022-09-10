@@ -52,7 +52,7 @@ let computerScore = 0;
 function game () {
        
     for (let i = 0; i < 5; i++){
-            playRound(playerSelection, getComputerChoice());
+            playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
         } 
 
         if (playerScore > computerScore){
